@@ -1,0 +1,29 @@
+body {
+
+  background: linear-gradient(90deg, #093342 0%, #234a58 100%);
+
+}
+
+h1 {
+
+  color: #4d7887;
+
+}
+
+ul {
+
+  list-style-type: none;
+
+}
+
+.border {
+
+  height: 20px;
+
+}
+
+#progress {
+
+  transition: width 0.3s linear;
+
+}
