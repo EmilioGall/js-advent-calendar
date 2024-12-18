@@ -92,12 +92,28 @@ body {
         font-size: 3rem;
         color: var(--lightoil-p);
         text-align: center;
-        background-color: aquamarine;
         border-radius: 5px;
         padding: 10px;
 
+        &.close {
+          background-color: aquamarine;
+
+        }
+
+        &.open {
+          background-color: lightskyblue;
+
+        }
+
+        &.half-open {
+          background-color: lightslategray;
+          color: var(--white-p);
+
+        }
+
         &.day-25 {
           background-color: lightcoral;
+          color: var(--white-p);
           grid-column: 1 / 4;
           column-gap: 20px;
 

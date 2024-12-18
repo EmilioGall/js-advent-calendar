@@ -24,13 +24,13 @@ const daysArray = [
    {
       dayValue: 4,
       gift: {},
-      status: 'close',
+      status: 'half-open',
 
    },
    {
       dayValue: 5,
       gift: {},
-      status: 'close',
+      status: 'half-open',
 
    },
    {
