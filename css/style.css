@@ -55,7 +55,7 @@ body {
   background: linear-gradient(90deg, var(--darkoil-p) 0%, var(--darkoil-p) 100%);
 
   header {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 
     .title-box {
       padding: 1rem;
