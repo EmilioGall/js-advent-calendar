@@ -79,16 +79,29 @@ body {
   }
 
   main {
+    margin: 0 auto;
+    width: 80%;
 
     .cards-container {
+      display: grid;
+      gap: 5px;
+      grid-template-columns: auto;
+      padding: 10px;
 
       .card {
-        /* border: 2px solid red; */
         font-size: 3rem;
         color: var(--lightoil-p);
         text-align: center;
+        background-color: aquamarine;
+        border-radius: 5px;
+        padding: 10px;
 
-        &.day-25 {}
+        &.day-25 {
+          background-color: lightcoral;
+          grid-column: 1 / 4;
+          column-gap: 20px;
+
+        }
 
       }
 
