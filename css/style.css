@@ -9,17 +9,27 @@
   --darkoil-p: #093342;
   --oil-p: #234a58;
   --lightoil-p: #4d7887;
-  --blue-p: rgba(47, 69, 204, 1);
-  --green-p: rgba(4, 223, 107, 1);
 
   --header-h: 5rem;
 
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 img {
-
   max-width: 100%;
+}
 
+ul {
+  list-style-type: none;
+}
+
+menu {
+  list-style-type: none;
 }
 
 a {
@@ -27,10 +37,6 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-}
-
-ul {
-  list-style-type: none;
 }
 
 button {
@@ -46,32 +52,49 @@ button {
 /******************************************************/
 
 body {
-
   background: linear-gradient(90deg, var(--darkoil-p) 0%, var(--darkoil-p) 100%);
 
-  main {
-
-    margin: 0 auto;
+  header {
+    margin-bottom: 2rem;
 
     .title-box {
+      padding: 1rem;
+      margin: 0 auto;
+      border: 2px solid black;
+      border-top: 0;
+      background-color: aqua;
+      border-radius: 0 0 25px 25px;
+      width: 80%;
 
       h1 {
-  
-        font-size: 50px;
+        /* border: 2px solid red; */
+        font-size: 3rem;
         color: var(--lightoil-p);
         text-align: center;
-      
+
       }
 
     }
 
   }
 
-}
+  main {
 
-ul {
+    .cards-container {
 
-  list-style-type: none;
+      .card {
+        /* border: 2px solid red; */
+        font-size: 3rem;
+        color: var(--lightoil-p);
+        text-align: center;
+
+        &.day-25 {}
+
+      }
+
+    }
+
+  }
 
 }
 
