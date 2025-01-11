@@ -24,7 +24,7 @@ const daysArray = [
    {
       dayValue: 4,
       gift: {},
-      status: 'half-open',
+      status: 'close',
 
    },
    {
@@ -156,12 +156,17 @@ const daysArray = [
 
 ];
 
-daysArray.forEach((day) => {
+// Serialize the days array
+const serializeDaysArray = JSON.stringify(daysArray);
 
-   console.log(`Status day ${day.dayValue} =`, day.status);
+// Store the serialized days array in local storage
+// localStorage.setItem('daysArray', serializeDaysArray);
 
-});
+// Get the serialized dazs array from local storage
+const serializedDaysArray = localStorage.getItem('daysArray');
 
+// Deserialize the array
+const storedDaysArray = JSON.parse(serializedDaysArray);
 
 // Define constant of Cards Container Dom Element
 const cardsContainerElem = document.querySelector(".cards-container");
