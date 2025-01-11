@@ -30,7 +30,7 @@ const daysArray = [
    {
       dayValue: 5,
       gift: {},
-      status: 'half-open',
+      status: 'close',
 
    },
    {
@@ -132,7 +132,7 @@ const daysArray = [
    {
       dayValue: 22,
       gift: {},
-      status: 'open',
+      status: 'close',
 
    },
    {
@@ -160,7 +160,7 @@ const daysArray = [
 const serializeDaysArray = JSON.stringify(daysArray);
 
 // Store the serialized days array in local storage
-// localStorage.setItem('daysArray', serializeDaysArray);
+localStorage.setItem('daysArray', serializeDaysArray);
 
 // Get the serialized dazs array from local storage
 const serializedDaysArray = localStorage.getItem('daysArray');
