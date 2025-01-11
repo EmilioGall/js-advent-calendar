@@ -94,14 +94,31 @@ body {
         text-align: center;
         border-radius: 5px;
         padding: 10px;
+        cursor: pointer;
 
         &.close {
           background-color: aquamarine;
+
+          &.day-25 {
+            background-color: lightcoral;
+            color: var(--white-p);
+            grid-column: 1 / 4;
+            column-gap: 20px;
+  
+          }
 
         }
 
         &.open {
           background-color: lightskyblue;
+
+          &.day-25 {
+            background-color: skyblue;
+            color: var(--white-p);
+            grid-column: 1 / 4;
+            column-gap: 20px;
+  
+          }
 
         }
 
@@ -109,15 +126,16 @@ body {
           background-color: lightslategray;
           color: var(--white-p);
 
+          &.day-25 {
+            background-color: slategray;
+            color: var(--white-p);
+            grid-column: 1 / 4;
+            column-gap: 20px;
+  
+          }
+
         }
 
-        &.day-25 {
-          background-color: lightcoral;
-          color: var(--white-p);
-          grid-column: 1 / 4;
-          column-gap: 20px;
-
-        }
 
       }
 

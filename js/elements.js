@@ -167,3 +167,4 @@ daysArray.forEach((day) => {
 const cardsContainerElem = document.querySelector(".cards-container");
 
 console.log("cardsContainerElem", typeof cardsContainerElem, cardsContainerElem);
+
