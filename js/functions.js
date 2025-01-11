@@ -32,17 +32,19 @@ function debounce(functionToCall, delay) {
 };
 
 /**
- * Description: function prints on DOM element [cardsContainer] days from a given array.
- * @param {array} days
- * @param {obj} cardsContainer
+ * Description: Function that prints days from a given array on a DOM element [cardsContainer].
+ * @param {array} days - The array of days to be printed.
+ * @param {object} cardsContainer - The DOM element where the days will be printed.
  */
 function printCalendarDays(days, cardsContainer) {
 
-   // Clear previous list elements
+   // Clear any previous list elements from the cardsContainer
    cardsContainer.innerHTML = '';
 
+   // Iterate over each day in the array and print it on the cardsContainer
    days.forEach((day) => {
 
+      // Create a new div element for each day and add it to the cardsContainer
       cardsContainer.innerHTML += `
          <div class="card ${day.status} day-${day.dayValue}">
             ${day.dayValue}
@@ -56,11 +58,13 @@ function printCalendarDays(days, cardsContainer) {
 // Define a function to add event listeners to cards
 function addCardEventListeners() {
 
-   // Define constant of Cards Dom Element
+   // Select all elements with class "card" from the DOM
    const cardsElem = document.querySelectorAll(".card");
 
+   // Iterate over each card element and add an event listener to it
    cardsElem.forEach(card => {
 
+      // Add an event listener to the card that will be triggered when it's clicked
       card.addEventListener('click', (event) => {
 
          console.log('event.target.innerText =', typeof event.target.innerText, event.target.innerText);
@@ -69,23 +73,26 @@ function addCardEventListeners() {
 
          console.log('cardClasses =', typeof cardClasses, cardClasses);
 
-         // Here, we process the click based on card's status
+         // Process the click based on the card's status
          if (cardClasses.includes('open')) {
 
+            // If the card is open, change its status to "half-open"
             storedDaysArray[event.target.innerText - 1].status = 'half-open';
 
          } else if (cardClasses.includes('half-open') || cardClasses.includes('close')) {
 
+            // If the card is half-open or close, change its status to "open"
             storedDaysArray[event.target.innerText - 1].status = 'open';
-         }
 
-         // Serialize the days array
+         };
+
+         // Serialize the updated days array
          const serializeDaysArray = JSON.stringify(storedDaysArray);
 
          // Store the serialized days array in local storage
          localStorage.setItem('daysArray', serializeDaysArray);
 
-         // Print on [cardsContainerElem] days in [daysArray] from Local Storage
+         // Print the updated [daysArray] on the [cardsContainer]
          printCalendarDays(storedDaysArray, cardsContainerElem);
 
          // Re-add the event listeners
@@ -100,19 +107,22 @@ function addCardEventListeners() {
 // Function to initialize the cards state
 function initializeCardsState() {
 
+   // Iterate over each day in the storedDaysArray and change its status to "half-open" if it's currently "open"
    storedDaysArray.forEach(day => {
 
       if (day.status === 'open') {
 
-         day.status = 'half-open'; // Change open cards to half-open
+         // Change open cards to half-open
+         day.status = 'half-open';
 
       };
 
    });
 
-   // Serialize the updated days array and store it again in local storage
+   // Serialize the updated days array
    const serializeDaysArray = JSON.stringify(storedDaysArray);
 
-   localStorage.setItem('daysArray', serializeDaysArray);
+   // Store the serialized days array in local storage
+   localStorage.setItem('daysArray', serializeDaysArray);;
 
 };

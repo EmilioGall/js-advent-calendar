@@ -1,12 +1,13 @@
 console.log('///// Elements /////');
 
-// Define constant of Days with attributes
+// Define a constant array named `daysArray` that represents days in a month, where each day has attributes such as day value, a gift object, and a status.
 const daysArray = [
 
+   // Each object in the array represents a day
    {
-      dayValue: 1,
-      gift: {},
-      status: 'close',
+      dayValue: 1, // The numerical value of the day (1-25)
+      gift: {}, // Placeholder for any gift associated with the day
+      status: 'close', // Status indicating whether the day is "open", "half-open" or "closed"
 
    },
    {
@@ -156,20 +157,19 @@ const daysArray = [
 
 ];
 
-// Serialize the days array
+// Serialize the `daysArray` into a JSON string format for storage
 const serializeDaysArray = JSON.stringify(daysArray);
 
-// Store the serialized days array in local storage
-localStorage.setItem('daysArray', serializeDaysArray);
+// Store the serialized array in local storage under the key 'daysArray'
+// localStorage.setItem('daysArray', serializeDaysArray);
 
-// Get the serialized dazs array from local storage
+// Retrieve the serialized days array from local storage
 const serializedDaysArray = localStorage.getItem('daysArray');
 
-// Deserialize the array
+// Deserialize the retrieved string back into a JavaScript array
 const storedDaysArray = JSON.parse(serializedDaysArray);
 
 // Define constant of Cards Container Dom Element
 const cardsContainerElem = document.querySelector(".cards-container");
 
 console.log("cardsContainerElem", typeof cardsContainerElem, cardsContainerElem);
-
