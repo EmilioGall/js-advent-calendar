@@ -173,3 +173,8 @@ const storedDaysArray = JSON.parse(serializedDaysArray);
 const cardsContainerElem = document.querySelector(".cards-container");
 
 console.log("cardsContainerElem", typeof cardsContainerElem, cardsContainerElem);
+
+// Define constant of Reset Button Dom Element
+const resetBtnElem = document.querySelector(".reset-btn");
+
+console.log("resetBtnElem", typeof resetBtnElem, resetBtnElem);

@@ -8,3 +8,12 @@ printCalendarDays(storedDaysArray, cardsContainerElem);
 
 // Call the function to add the event listeners
 addCardEventListeners();
+
+
+// Add an event listener to the resetBtnElem that will be triggered when it's clicked
+resetBtnElem.addEventListener('click', () => {
+
+// Store the serialized array in local storage under the key 'daysArray'
+localStorage.setItem('daysArray', serializeDaysArray);
+
+});
